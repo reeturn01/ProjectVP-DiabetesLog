@@ -43,5 +43,31 @@ namespace ProjectVP_DiabetesLog
             dtp_Time.Value = DateTime.Now;
             dtp_Time.ShowUpDown = true;
         }
+
+        private void checkBox_EnableInsulin_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox_EnableInsulin.Checked == true)
+            {
+                cb_InsulinType.Enabled = true;
+                nud_InsulinAmount.Enabled = true;
+            }
+            else
+            {
+                cb_InsulinType.Enabled = false;
+                nud_InsulinAmount.Enabled = false;
+            }
+        }
+
+        private void checkBox_EnableMeasurement_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox_EnableMeasurement.Checked == true)
+            {
+                nud_MeasuredValue.Enabled = true;
+            }
+            else
+            {
+                nud_MeasuredValue.Enabled = false;
+            }
+        }
     }
 }

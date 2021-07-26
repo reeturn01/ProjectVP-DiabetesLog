@@ -50,23 +50,27 @@ namespace ProjectVP_DiabetesLog
             this.Measurement = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.InsulinType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.InsulinAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.checkBox_EnableInsulin = new System.Windows.Forms.CheckBox();
+            this.checkBox_EnableMeasurement = new System.Windows.Forms.CheckBox();
+            this.gb_DateAndTime = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.nud_MeasuredValue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nud_InsulinAmount)).BeginInit();
             this.gb_Insulin.SuspendLayout();
             this.gb_Measurement.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Measurement)).BeginInit();
+            this.gb_DateAndTime.SuspendLayout();
             this.SuspendLayout();
             // 
             // dtp_Date
             // 
-            this.dtp_Date.Location = new System.Drawing.Point(55, 18);
+            this.dtp_Date.Location = new System.Drawing.Point(55, 22);
             this.dtp_Date.Name = "dtp_Date";
             this.dtp_Date.Size = new System.Drawing.Size(200, 20);
             this.dtp_Date.TabIndex = 0;
             // 
             // dtp_Time
             // 
-            this.dtp_Time.Location = new System.Drawing.Point(55, 50);
+            this.dtp_Time.Location = new System.Drawing.Point(55, 54);
             this.dtp_Time.Name = "dtp_Time";
             this.dtp_Time.Size = new System.Drawing.Size(200, 20);
             this.dtp_Time.TabIndex = 1;
@@ -74,7 +78,7 @@ namespace ProjectVP_DiabetesLog
             // lbl_Date
             // 
             this.lbl_Date.AutoSize = true;
-            this.lbl_Date.Location = new System.Drawing.Point(6, 25);
+            this.lbl_Date.Location = new System.Drawing.Point(6, 29);
             this.lbl_Date.Name = "lbl_Date";
             this.lbl_Date.Size = new System.Drawing.Size(36, 13);
             this.lbl_Date.TabIndex = 2;
@@ -83,7 +87,7 @@ namespace ProjectVP_DiabetesLog
             // lbl_Time
             // 
             this.lbl_Time.AutoSize = true;
-            this.lbl_Time.Location = new System.Drawing.Point(6, 56);
+            this.lbl_Time.Location = new System.Drawing.Point(6, 60);
             this.lbl_Time.Name = "lbl_Time";
             this.lbl_Time.Size = new System.Drawing.Size(43, 13);
             this.lbl_Time.TabIndex = 3;
@@ -92,7 +96,7 @@ namespace ProjectVP_DiabetesLog
             // lbl_MeasuredValue
             // 
             this.lbl_MeasuredValue.AutoSize = true;
-            this.lbl_MeasuredValue.Location = new System.Drawing.Point(6, 87);
+            this.lbl_MeasuredValue.Location = new System.Drawing.Point(6, 48);
             this.lbl_MeasuredValue.Name = "lbl_MeasuredValue";
             this.lbl_MeasuredValue.Size = new System.Drawing.Size(112, 13);
             this.lbl_MeasuredValue.TabIndex = 4;
@@ -106,7 +110,7 @@ namespace ProjectVP_DiabetesLog
             0,
             0,
             65536});
-            this.nud_MeasuredValue.Location = new System.Drawing.Point(135, 87);
+            this.nud_MeasuredValue.Location = new System.Drawing.Point(135, 48);
             this.nud_MeasuredValue.Name = "nud_MeasuredValue";
             this.nud_MeasuredValue.Size = new System.Drawing.Size(120, 20);
             this.nud_MeasuredValue.TabIndex = 5;
@@ -114,7 +118,7 @@ namespace ProjectVP_DiabetesLog
             // lbl_InsulinType
             // 
             this.lbl_InsulinType.AutoSize = true;
-            this.lbl_InsulinType.Location = new System.Drawing.Point(6, 24);
+            this.lbl_InsulinType.Location = new System.Drawing.Point(6, 45);
             this.lbl_InsulinType.Name = "lbl_InsulinType";
             this.lbl_InsulinType.Size = new System.Drawing.Size(88, 13);
             this.lbl_InsulinType.TabIndex = 6;
@@ -123,7 +127,7 @@ namespace ProjectVP_DiabetesLog
             // lbl_InsulinAmount
             // 
             this.lbl_InsulinAmount.AutoSize = true;
-            this.lbl_InsulinAmount.Location = new System.Drawing.Point(6, 49);
+            this.lbl_InsulinAmount.Location = new System.Drawing.Point(6, 72);
             this.lbl_InsulinAmount.Name = "lbl_InsulinAmount";
             this.lbl_InsulinAmount.Size = new System.Drawing.Size(58, 13);
             this.lbl_InsulinAmount.TabIndex = 7;
@@ -131,22 +135,24 @@ namespace ProjectVP_DiabetesLog
             // 
             // cb_InsulinType
             // 
+            this.cb_InsulinType.Enabled = false;
             this.cb_InsulinType.FormattingEnabled = true;
-            this.cb_InsulinType.Location = new System.Drawing.Point(101, 19);
+            this.cb_InsulinType.Location = new System.Drawing.Point(134, 42);
             this.cb_InsulinType.Name = "cb_InsulinType";
             this.cb_InsulinType.Size = new System.Drawing.Size(121, 21);
             this.cb_InsulinType.TabIndex = 8;
             // 
             // nud_InsulinAmount
             // 
-            this.nud_InsulinAmount.Location = new System.Drawing.Point(101, 47);
+            this.nud_InsulinAmount.Enabled = false;
+            this.nud_InsulinAmount.Location = new System.Drawing.Point(134, 70);
             this.nud_InsulinAmount.Name = "nud_InsulinAmount";
             this.nud_InsulinAmount.Size = new System.Drawing.Size(120, 20);
             this.nud_InsulinAmount.TabIndex = 9;
             // 
             // btn_Add
             // 
-            this.btn_Add.Location = new System.Drawing.Point(12, 321);
+            this.btn_Add.Location = new System.Drawing.Point(12, 365);
             this.btn_Add.Name = "btn_Add";
             this.btn_Add.Size = new System.Drawing.Size(107, 23);
             this.btn_Add.TabIndex = 10;
@@ -155,7 +161,7 @@ namespace ProjectVP_DiabetesLog
             // 
             // btn_Close
             // 
-            this.btn_Close.Location = new System.Drawing.Point(177, 321);
+            this.btn_Close.Location = new System.Drawing.Point(177, 365);
             this.btn_Close.Name = "btn_Close";
             this.btn_Close.Size = new System.Drawing.Size(75, 23);
             this.btn_Close.TabIndex = 11;
@@ -164,7 +170,7 @@ namespace ProjectVP_DiabetesLog
             // 
             // btn_InsulinAddType
             // 
-            this.btn_InsulinAddType.Location = new System.Drawing.Point(9, 81);
+            this.btn_InsulinAddType.Location = new System.Drawing.Point(9, 102);
             this.btn_InsulinAddType.Name = "btn_InsulinAddType";
             this.btn_InsulinAddType.Size = new System.Drawing.Size(103, 23);
             this.btn_InsulinAddType.TabIndex = 12;
@@ -173,29 +179,27 @@ namespace ProjectVP_DiabetesLog
             // 
             // gb_Insulin
             // 
+            this.gb_Insulin.Controls.Add(this.checkBox_EnableInsulin);
             this.gb_Insulin.Controls.Add(this.lbl_InsulinType);
             this.gb_Insulin.Controls.Add(this.btn_InsulinAddType);
             this.gb_Insulin.Controls.Add(this.lbl_InsulinAmount);
             this.gb_Insulin.Controls.Add(this.nud_InsulinAmount);
             this.gb_Insulin.Controls.Add(this.cb_InsulinType);
-            this.gb_Insulin.Location = new System.Drawing.Point(12, 145);
+            this.gb_Insulin.Location = new System.Drawing.Point(12, 208);
             this.gb_Insulin.Name = "gb_Insulin";
-            this.gb_Insulin.Size = new System.Drawing.Size(278, 119);
+            this.gb_Insulin.Size = new System.Drawing.Size(278, 140);
             this.gb_Insulin.TabIndex = 13;
             this.gb_Insulin.TabStop = false;
             this.gb_Insulin.Text = "Инсулин";
             // 
             // gb_Measurement
             // 
-            this.gb_Measurement.Controls.Add(this.lbl_Date);
-            this.gb_Measurement.Controls.Add(this.dtp_Date);
-            this.gb_Measurement.Controls.Add(this.dtp_Time);
-            this.gb_Measurement.Controls.Add(this.lbl_Time);
+            this.gb_Measurement.Controls.Add(this.checkBox_EnableMeasurement);
             this.gb_Measurement.Controls.Add(this.nud_MeasuredValue);
             this.gb_Measurement.Controls.Add(this.lbl_MeasuredValue);
-            this.gb_Measurement.Location = new System.Drawing.Point(12, 12);
+            this.gb_Measurement.Location = new System.Drawing.Point(12, 118);
             this.gb_Measurement.Name = "gb_Measurement";
-            this.gb_Measurement.Size = new System.Drawing.Size(278, 127);
+            this.gb_Measurement.Size = new System.Drawing.Size(278, 84);
             this.gb_Measurement.TabIndex = 14;
             this.gb_Measurement.TabStop = false;
             this.gb_Measurement.Text = "Мерење";
@@ -211,7 +215,7 @@ namespace ProjectVP_DiabetesLog
             this.Measurement,
             this.InsulinType,
             this.InsulinAmount});
-            this.dgv_Measurement.Location = new System.Drawing.Point(310, 12);
+            this.dgv_Measurement.Location = new System.Drawing.Point(313, 14);
             this.dgv_Measurement.Name = "dgv_Measurement";
             this.dgv_Measurement.ReadOnly = true;
             this.dgv_Measurement.Size = new System.Drawing.Size(586, 252);
@@ -249,11 +253,49 @@ namespace ProjectVP_DiabetesLog
             this.InsulinAmount.ReadOnly = true;
             this.InsulinAmount.Width = 119;
             // 
+            // checkBox_EnableInsulin
+            // 
+            this.checkBox_EnableInsulin.AutoSize = true;
+            this.checkBox_EnableInsulin.Location = new System.Drawing.Point(6, 19);
+            this.checkBox_EnableInsulin.Name = "checkBox_EnableInsulin";
+            this.checkBox_EnableInsulin.Size = new System.Drawing.Size(80, 17);
+            this.checkBox_EnableInsulin.TabIndex = 13;
+            this.checkBox_EnableInsulin.Text = "Овозможи";
+            this.checkBox_EnableInsulin.UseVisualStyleBackColor = true;
+            this.checkBox_EnableInsulin.CheckedChanged += new System.EventHandler(this.checkBox_EnableInsulin_CheckedChanged);
+            // 
+            // checkBox_EnableMeasurement
+            // 
+            this.checkBox_EnableMeasurement.AutoSize = true;
+            this.checkBox_EnableMeasurement.Checked = true;
+            this.checkBox_EnableMeasurement.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox_EnableMeasurement.Location = new System.Drawing.Point(6, 19);
+            this.checkBox_EnableMeasurement.Name = "checkBox_EnableMeasurement";
+            this.checkBox_EnableMeasurement.Size = new System.Drawing.Size(80, 17);
+            this.checkBox_EnableMeasurement.TabIndex = 6;
+            this.checkBox_EnableMeasurement.Text = "Овозможи";
+            this.checkBox_EnableMeasurement.UseVisualStyleBackColor = true;
+            this.checkBox_EnableMeasurement.CheckedChanged += new System.EventHandler(this.checkBox_EnableMeasurement_CheckedChanged);
+            // 
+            // gb_DateAndTime
+            // 
+            this.gb_DateAndTime.Controls.Add(this.lbl_Date);
+            this.gb_DateAndTime.Controls.Add(this.lbl_Time);
+            this.gb_DateAndTime.Controls.Add(this.dtp_Date);
+            this.gb_DateAndTime.Controls.Add(this.dtp_Time);
+            this.gb_DateAndTime.Location = new System.Drawing.Point(12, 12);
+            this.gb_DateAndTime.Name = "gb_DateAndTime";
+            this.gb_DateAndTime.Size = new System.Drawing.Size(278, 100);
+            this.gb_DateAndTime.TabIndex = 16;
+            this.gb_DateAndTime.TabStop = false;
+            this.gb_DateAndTime.Text = "Дата и време";
+            // 
             // FormAddMeasurement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(914, 379);
+            this.ClientSize = new System.Drawing.Size(943, 483);
+            this.Controls.Add(this.gb_DateAndTime);
             this.Controls.Add(this.dgv_Measurement);
             this.Controls.Add(this.gb_Measurement);
             this.Controls.Add(this.gb_Insulin);
@@ -268,6 +310,8 @@ namespace ProjectVP_DiabetesLog
             this.gb_Measurement.ResumeLayout(false);
             this.gb_Measurement.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Measurement)).EndInit();
+            this.gb_DateAndTime.ResumeLayout(false);
+            this.gb_DateAndTime.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -295,6 +339,9 @@ namespace ProjectVP_DiabetesLog
         private System.Windows.Forms.DataGridViewTextBoxColumn Measurement;
         private System.Windows.Forms.DataGridViewTextBoxColumn InsulinType;
         private System.Windows.Forms.DataGridViewTextBoxColumn InsulinAmount;
+        private System.Windows.Forms.CheckBox checkBox_EnableInsulin;
+        private System.Windows.Forms.CheckBox checkBox_EnableMeasurement;
+        private System.Windows.Forms.GroupBox gb_DateAndTime;
     }
 }
 
