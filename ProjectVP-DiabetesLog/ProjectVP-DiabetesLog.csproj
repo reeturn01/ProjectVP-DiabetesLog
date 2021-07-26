@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormAddNewInsulinType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddNewInsulinType.Designer.cs">
+      <DependentUpon>FormAddNewInsulinType.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormAddMeasurement.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -55,6 +61,9 @@
     <Compile Include="InsulinType.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormAddNewInsulinType.resx">
+      <DependentUpon>FormAddNewInsulinType.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormAddMeasurement.resx">
       <DependentUpon>FormAddMeasurement.cs</DependentUpon>
     </EmbeddedResource>

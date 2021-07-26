@@ -10,9 +10,10 @@ using System.Windows.Forms;
 
 namespace ProjectVP_DiabetesLog
 {
+    
     public partial class FormAddMeasurement : Form
     {
-        InsulinType insulinType;
+        public static InsulinType insulinType;
         public FormAddMeasurement()
         {
             InitializeComponent();
@@ -20,6 +21,7 @@ namespace ProjectVP_DiabetesLog
             //Moi initializacii
             Initialize_dtp_Date();
             Initialize_dtp_Time();
+
             insulinType = new InsulinType();
             Initialize_cb_InsulinType();
 
@@ -67,6 +69,16 @@ namespace ProjectVP_DiabetesLog
             else
             {
                 nud_MeasuredValue.Enabled = false;
+            }
+        }
+
+        private void btn_InsulinAddType_Click(object sender, EventArgs e)
+        {
+            FormAddNewInsulinType addNewInsulinType = new FormAddNewInsulinType();
+            if (addNewInsulinType.ShowDialog() == DialogResult.OK)
+            {
+                cb_InsulinType.DataSource = null;
+                Initialize_cb_InsulinType();
             }
         }
     }

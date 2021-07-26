@@ -176,6 +176,7 @@ namespace ProjectVP_DiabetesLog
             this.btn_InsulinAddType.TabIndex = 12;
             this.btn_InsulinAddType.Text = "Додади нов тип";
             this.btn_InsulinAddType.UseVisualStyleBackColor = true;
+            this.btn_InsulinAddType.Click += new System.EventHandler(this.btn_InsulinAddType_Click);
             // 
             // gb_Insulin
             // 
