@@ -52,6 +52,7 @@
     <Compile Include="FormAddMeasurement.Designer.cs">
       <DependentUpon>FormAddMeasurement.cs</DependentUpon>
     </Compile>
+    <Compile Include="InsulinType.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormAddMeasurement.resx">
