@@ -8,11 +8,11 @@ namespace ProjectVP_DiabetesLog
 {
     public class InsulinType
     {
-        public string[] Types{ get; set; }
+        public string[] types{ get; set; }
 
         public InsulinType()
         {
-            Types = new string[]
+            types = new string[]
             {
                 "Apidra",
                 "Lantus",
