@@ -35,6 +35,8 @@ namespace ProjectVP_DiabetesLog
             this.btn_Cancel = new System.Windows.Forms.Button();
             this.lbl_InsulinName = new System.Windows.Forms.Label();
             this.ep_AddNewInsulinType = new System.Windows.Forms.ErrorProvider(this.components);
+            this.tb_Manufacturer = new System.Windows.Forms.TextBox();
+            this.lbl_Manufacturer = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ep_AddNewInsulinType)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,11 +80,29 @@ namespace ProjectVP_DiabetesLog
             // 
             this.ep_AddNewInsulinType.ContainerControl = this;
             // 
+            // tb_Manufacturer
+            // 
+            this.tb_Manufacturer.Location = new System.Drawing.Point(142, 70);
+            this.tb_Manufacturer.Name = "tb_Manufacturer";
+            this.tb_Manufacturer.Size = new System.Drawing.Size(100, 20);
+            this.tb_Manufacturer.TabIndex = 4;
+            // 
+            // lbl_Manufacturer
+            // 
+            this.lbl_Manufacturer.AutoSize = true;
+            this.lbl_Manufacturer.Location = new System.Drawing.Point(45, 73);
+            this.lbl_Manufacturer.Name = "lbl_Manufacturer";
+            this.lbl_Manufacturer.Size = new System.Drawing.Size(83, 13);
+            this.lbl_Manufacturer.TabIndex = 5;
+            this.lbl_Manufacturer.Text = "Производител:";
+            // 
             // FormAddNewInsulinType
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(312, 174);
+            this.Controls.Add(this.lbl_Manufacturer);
+            this.Controls.Add(this.tb_Manufacturer);
             this.Controls.Add(this.lbl_InsulinName);
             this.Controls.Add(this.btn_Cancel);
             this.Controls.Add(this.btn_Add);
@@ -102,5 +122,7 @@ namespace ProjectVP_DiabetesLog
         private System.Windows.Forms.Button btn_Cancel;
         private System.Windows.Forms.Label lbl_InsulinName;
         private System.Windows.Forms.ErrorProvider ep_AddNewInsulinType;
+        private System.Windows.Forms.Label lbl_Manufacturer;
+        private System.Windows.Forms.TextBox tb_Manufacturer;
     }
 }

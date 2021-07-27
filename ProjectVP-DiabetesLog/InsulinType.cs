@@ -8,31 +8,42 @@ namespace ProjectVP_DiabetesLog
 {
     public class InsulinType
     {
-        public List<string> types{ get; private set; }
+        public string name { get; private set; }
+        public string manufacturer { get; private set; }
 
-        public InsulinType()
+        public InsulinType(string name, string manufacturer)
         {
-            types = new string[]
-            {
-                "Apidra",
-                "Lantus",
-                "Levemir"
-            }.ToList();
+            this.name = name;
+            this.manufacturer = manufacturer;
         }
-        public bool ContainsType(string name) => types.Contains(name);
-
-        public bool addType(string name)
+        public override bool Equals(object obj)
         {
-            if (ContainsType(name))
+            if (obj == null)
                 return false;
-            types.Add(name);
-            return true;
+            if (obj.GetType().Equals(this.GetType()))
+            {
+                InsulinType tmp = (InsulinType)obj;
+                if (this.name.Equals(tmp.name)
+                    && this.manufacturer.Equals(tmp.manufacturer))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+        public override int GetHashCode()
+        {
+            int hash = 17;
+            hash = 31 * hash + name.GetHashCode();
+            hash = 31 * hash + manufacturer.GetHashCode();
+            return hash;
+
         }
         public override string ToString()
         {
-            StringBuilder builder = new StringBuilder();
-            types.ForEach(e => builder.Append(e));
-            return builder.ToString();
+            //Prikazuva ime na Insulin
+            return name;
         }
+        
     }
 }

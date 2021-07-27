@@ -13,23 +13,24 @@ namespace ProjectVP_DiabetesLog
     
     public partial class FormAddMeasurement : Form
     {
-        public static InsulinType insulinType;
+        public static List<InsulinType> insulinTypes;
         public FormAddMeasurement()
         {
             InitializeComponent();
 
             //Moi initializacii
+            insulinTypes = new List<InsulinType>();
+
             Initialize_dtp_Date();
             Initialize_dtp_Time();
 
-            insulinType = new InsulinType();
             Initialize_cb_InsulinType();
 
         }
 
         private void Initialize_cb_InsulinType()
         {
-            cb_InsulinType.DataSource = insulinType.types;
+            cb_InsulinType.DataSource = insulinTypes;
         }
 
         private void Initialize_dtp_Date()
