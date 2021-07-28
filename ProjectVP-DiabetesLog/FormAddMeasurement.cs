@@ -53,11 +53,13 @@ namespace ProjectVP_DiabetesLog
             {
                 cb_InsulinType.Enabled = true;
                 nud_InsulinAmount.Enabled = true;
+                btn_InsulinAddType.Enabled = true;
             }
             else
             {
                 cb_InsulinType.Enabled = false;
                 nud_InsulinAmount.Enabled = false;
+                btn_InsulinAddType.Enabled = false;
             }
         }
 
@@ -72,6 +74,25 @@ namespace ProjectVP_DiabetesLog
                 nud_MeasuredValue.Enabled = false;
             }
         }
+        private void checkBox_EnableMeal_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox_EnableMeal.Checked == true)
+            {
+                cb_Food.Enabled = true;
+                nud_AmountMeal.Enabled = true;
+                btn_AddFoodType.Enabled = true;
+                btn_AddMeal.Enabled = true;
+                btn_RemoveMeal.Enabled = true;
+            }
+            else
+            {
+                cb_Food.Enabled = false;
+                nud_AmountMeal.Enabled = false;
+                btn_AddFoodType.Enabled = false;
+                btn_AddMeal.Enabled = false;
+                btn_RemoveMeal.Enabled = false;
+            }
+        }
 
         private void btn_InsulinAddType_Click(object sender, EventArgs e)
         {
@@ -82,5 +103,6 @@ namespace ProjectVP_DiabetesLog
                 Initialize_cb_InsulinType();
             }
         }
+
     }
 }

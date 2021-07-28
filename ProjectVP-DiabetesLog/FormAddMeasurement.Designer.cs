@@ -178,6 +178,7 @@ namespace ProjectVP_DiabetesLog
             // 
             // btn_InsulinAddType
             // 
+            this.btn_InsulinAddType.Enabled = false;
             this.btn_InsulinAddType.Location = new System.Drawing.Point(9, 102);
             this.btn_InsulinAddType.Name = "btn_InsulinAddType";
             this.btn_InsulinAddType.Size = new System.Drawing.Size(103, 23);
@@ -294,6 +295,7 @@ namespace ProjectVP_DiabetesLog
             this.checkBox_EnableMeal.TabIndex = 0;
             this.checkBox_EnableMeal.Text = "Овозможи";
             this.checkBox_EnableMeal.UseVisualStyleBackColor = true;
+            this.checkBox_EnableMeal.CheckedChanged += new System.EventHandler(this.checkBox_EnableMeal_CheckedChanged);
             // 
             // lbl_Food
             // 
@@ -315,6 +317,7 @@ namespace ProjectVP_DiabetesLog
             // 
             // cb_Food
             // 
+            this.cb_Food.Enabled = false;
             this.cb_Food.FormattingEnabled = true;
             this.cb_Food.Location = new System.Drawing.Point(141, 41);
             this.cb_Food.Name = "cb_Food";
@@ -323,6 +326,7 @@ namespace ProjectVP_DiabetesLog
             // 
             // nud_AmountMeal
             // 
+            this.nud_AmountMeal.Enabled = false;
             this.nud_AmountMeal.Location = new System.Drawing.Point(142, 69);
             this.nud_AmountMeal.Maximum = new decimal(new int[] {
             1000,
@@ -335,6 +339,7 @@ namespace ProjectVP_DiabetesLog
             // 
             // btn_AddMeal
             // 
+            this.btn_AddMeal.Enabled = false;
             this.btn_AddMeal.Location = new System.Drawing.Point(10, 106);
             this.btn_AddMeal.Name = "btn_AddMeal";
             this.btn_AddMeal.Size = new System.Drawing.Size(110, 23);
@@ -344,6 +349,7 @@ namespace ProjectVP_DiabetesLog
             // 
             // btn_RemoveMeal
             // 
+            this.btn_RemoveMeal.Enabled = false;
             this.btn_RemoveMeal.Location = new System.Drawing.Point(144, 106);
             this.btn_RemoveMeal.Name = "btn_RemoveMeal";
             this.btn_RemoveMeal.Size = new System.Drawing.Size(118, 23);
@@ -368,6 +374,7 @@ namespace ProjectVP_DiabetesLog
             // 
             // btn_AddFoodType
             // 
+            this.btn_AddFoodType.Enabled = false;
             this.btn_AddFoodType.Location = new System.Drawing.Point(306, 39);
             this.btn_AddFoodType.Name = "btn_AddFoodType";
             this.btn_AddFoodType.Size = new System.Drawing.Size(88, 23);
