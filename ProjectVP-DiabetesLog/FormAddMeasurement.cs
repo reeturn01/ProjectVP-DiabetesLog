@@ -112,5 +112,24 @@ namespace ProjectVP_DiabetesLog
                 cb_Food.Items.Add(formAddFoodType.foodToAdd);
             }
         }
+
+        private void btn_AddMeal_Click(object sender, EventArgs e)
+        {
+            if (cb_Food.SelectedIndex != -1)
+            {
+                Food tmp = (Food)cb_Food.SelectedItem;
+                ListViewItem viewItem = new ListViewItem(tmp.ToArray());
+                viewItem.SubItems.Add(nud_AmountMeal.Value.ToString());
+                listView_Meals.Items.Add(viewItem);
+            }
+        }
+
+        private void btn_RemoveMeal_Click(object sender, EventArgs e)
+        {
+            if (listView_Meals.SelectedIndices.Count != 0)
+            {
+                listView_Meals.Items.Remove(listView_Meals.SelectedItems[0]);
+            }
+        }
     }
 }

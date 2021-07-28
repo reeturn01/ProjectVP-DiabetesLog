@@ -35,7 +35,10 @@ namespace ProjectVP_DiabetesLog
             }
             return false;
         }
-
+        public string[] ToArray()
+        {
+            return new string[] { name, manufacturer, carbs.ToString() };
+        }
         public override int GetHashCode()
         {
             int hash = 17;
