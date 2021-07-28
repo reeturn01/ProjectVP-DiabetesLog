@@ -21,16 +21,12 @@ namespace ProjectVP_DiabetesLog
         {
             string insulinName = tb_InsulinName.Text.Trim();
             string insulinManufacturer = tb_Manufacturer.Text.Trim();
-            if (!CheckIfTextBoxInputsEmpty(insulinName, insulinManufacturer))
+            if (!CheckIfFormFieldsEmpty(insulinName, insulinManufacturer))
             {
                 InsulinType tmp = new InsulinType(insulinName.ToUpper(), insulinManufacturer.ToUpper());
                 if (FormAddMeasurement.insulinTypes.Contains(tmp))
                 {
-                    DialogResult popUp = MessageBox.Show("Внесениот тип на инсулин веќе постои во листата.Дали сакате да додадете друг?", "Постоечки тип!", MessageBoxButtons.YesNo);
-                    if (popUp.Equals(DialogResult.No))
-                    {
-                        this.DialogResult = DialogResult.Cancel;
-                    }
+                    MessageBox.Show("Внесениот тип на инсулин веќе постои во листата.", "Постоечки тип!", MessageBoxButtons.OK);
                 }
                 else
                 {
@@ -45,7 +41,7 @@ namespace ProjectVP_DiabetesLog
         {
             this.DialogResult = DialogResult.Cancel;
         }
-        private bool CheckIfTextBoxInputsEmpty(string name, string manufacturer)
+        private bool CheckIfFormFieldsEmpty(string name, string manufacturer)
         {
             ep_AddNewInsulinType.Clear();
             bool errorSet = false;

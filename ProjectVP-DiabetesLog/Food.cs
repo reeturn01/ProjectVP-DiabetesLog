@@ -8,13 +8,13 @@ namespace ProjectVP_DiabetesLog
 {
     public class Food
     {
-        public string type { get; private set; }
+        public string name { get; private set; }
         public string manufacturer { get; private set; }
-        public float carbs { get; private set; }
+        public double carbs { get; private set; }
 
-        public Food(string type, string manufacturer, float carbs)
+        public Food(string name, string manufacturer, double carbs)
         {
-            this.type = type;
+            this.name = name;
             this.manufacturer = manufacturer;
             this.carbs = carbs;
         }
@@ -26,7 +26,7 @@ namespace ProjectVP_DiabetesLog
             if (obj.GetType().Equals(this.GetType()))
             {
                 Food tmp = (Food)obj;
-                if (tmp.type.Equals(this.type)
+                if (tmp.name.Equals(this.name)
                     && tmp.manufacturer.Equals(this.manufacturer)
                     && tmp.carbs.Equals(this.carbs))
                 {
@@ -39,10 +39,14 @@ namespace ProjectVP_DiabetesLog
         public override int GetHashCode()
         {
             int hash = 17;
-            hash = hash * 31 + type.GetHashCode();
+            hash = hash * 31 + name.GetHashCode();
             hash = hash * 31 + manufacturer.GetHashCode();
             hash = hash * 31 + carbs.GetHashCode();
             return hash;
+        }
+        public override string ToString()
+        {
+            return name + ", " + manufacturer;
         }
     }
 }

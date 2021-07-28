@@ -104,5 +104,13 @@ namespace ProjectVP_DiabetesLog
             }
         }
 
+        private void btn_AddFoodType_Click(object sender, EventArgs e)
+        {
+            FormAddFoodType formAddFoodType = new FormAddFoodType();
+            if (formAddFoodType.ShowDialog() == DialogResult.OK)
+            {
+                cb_Food.Items.Add(formAddFoodType.foodToAdd);
+            }
+        }
     }
 }

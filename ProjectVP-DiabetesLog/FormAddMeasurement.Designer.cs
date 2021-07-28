@@ -383,6 +383,7 @@ namespace ProjectVP_DiabetesLog
             this.btn_AddFoodType.TabIndex = 18;
             this.btn_AddFoodType.Text = "Додади храна";
             this.btn_AddFoodType.UseVisualStyleBackColor = true;
+            this.btn_AddFoodType.Click += new System.EventHandler(this.btn_AddFoodType_Click);
             // 
             // col_Amount
             // 
