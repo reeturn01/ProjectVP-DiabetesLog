@@ -43,22 +43,30 @@ namespace ProjectVP_DiabetesLog
             this.btn_Close = new System.Windows.Forms.Button();
             this.btn_InsulinAddType = new System.Windows.Forms.Button();
             this.gb_Insulin = new System.Windows.Forms.GroupBox();
-            this.gb_Measurement = new System.Windows.Forms.GroupBox();
-            this.dgv_Measurement = new System.Windows.Forms.DataGridView();
-            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Time = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Measurement = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.InsulinType = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.InsulinAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.checkBox_EnableInsulin = new System.Windows.Forms.CheckBox();
+            this.gb_Measurement = new System.Windows.Forms.GroupBox();
             this.checkBox_EnableMeasurement = new System.Windows.Forms.CheckBox();
             this.gb_DateAndTime = new System.Windows.Forms.GroupBox();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.gb_Meal = new System.Windows.Forms.GroupBox();
+            this.checkBox_EnableMeal = new System.Windows.Forms.CheckBox();
+            this.lbl_Food = new System.Windows.Forms.Label();
+            this.lbl_AmountMeal = new System.Windows.Forms.Label();
+            this.cb_Food = new System.Windows.Forms.ComboBox();
+            this.nud_AmountMeal = new System.Windows.Forms.NumericUpDown();
+            this.btn_AddMeal = new System.Windows.Forms.Button();
+            this.btn_RemoveMeal = new System.Windows.Forms.Button();
+            this.col_Type = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.col_Manufacturer = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.col_Carbs = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btn_AddFoodType = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.nud_MeasuredValue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nud_InsulinAmount)).BeginInit();
             this.gb_Insulin.SuspendLayout();
             this.gb_Measurement.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_Measurement)).BeginInit();
             this.gb_DateAndTime.SuspendLayout();
+            this.gb_Meal.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_AmountMeal)).BeginInit();
             this.SuspendLayout();
             // 
             // dtp_Date
@@ -193,6 +201,17 @@ namespace ProjectVP_DiabetesLog
             this.gb_Insulin.TabStop = false;
             this.gb_Insulin.Text = "Инсулин";
             // 
+            // checkBox_EnableInsulin
+            // 
+            this.checkBox_EnableInsulin.AutoSize = true;
+            this.checkBox_EnableInsulin.Location = new System.Drawing.Point(6, 19);
+            this.checkBox_EnableInsulin.Name = "checkBox_EnableInsulin";
+            this.checkBox_EnableInsulin.Size = new System.Drawing.Size(80, 17);
+            this.checkBox_EnableInsulin.TabIndex = 13;
+            this.checkBox_EnableInsulin.Text = "Овозможи";
+            this.checkBox_EnableInsulin.UseVisualStyleBackColor = true;
+            this.checkBox_EnableInsulin.CheckedChanged += new System.EventHandler(this.checkBox_EnableInsulin_CheckedChanged);
+            // 
             // gb_Measurement
             // 
             this.gb_Measurement.Controls.Add(this.checkBox_EnableMeasurement);
@@ -204,66 +223,6 @@ namespace ProjectVP_DiabetesLog
             this.gb_Measurement.TabIndex = 14;
             this.gb_Measurement.TabStop = false;
             this.gb_Measurement.Text = "Мерење";
-            // 
-            // dgv_Measurement
-            // 
-            this.dgv_Measurement.AllowUserToAddRows = false;
-            this.dgv_Measurement.AllowUserToDeleteRows = false;
-            this.dgv_Measurement.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_Measurement.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Date,
-            this.Time,
-            this.Measurement,
-            this.InsulinType,
-            this.InsulinAmount});
-            this.dgv_Measurement.Location = new System.Drawing.Point(313, 14);
-            this.dgv_Measurement.Name = "dgv_Measurement";
-            this.dgv_Measurement.ReadOnly = true;
-            this.dgv_Measurement.Size = new System.Drawing.Size(586, 252);
-            this.dgv_Measurement.TabIndex = 15;
-            // 
-            // Date
-            // 
-            this.Date.HeaderText = "Дата";
-            this.Date.Name = "Date";
-            this.Date.ReadOnly = true;
-            // 
-            // Time
-            // 
-            this.Time.HeaderText = "Време";
-            this.Time.Name = "Time";
-            this.Time.ReadOnly = true;
-            // 
-            // Measurement
-            // 
-            this.Measurement.HeaderText = "Измерена вредност";
-            this.Measurement.Name = "Measurement";
-            this.Measurement.ReadOnly = true;
-            // 
-            // InsulinType
-            // 
-            this.InsulinType.HeaderText = "Тип на инсулин";
-            this.InsulinType.Name = "InsulinType";
-            this.InsulinType.ReadOnly = true;
-            // 
-            // InsulinAmount
-            // 
-            this.InsulinAmount.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.InsulinAmount.HeaderText = "Количина (инсулин)";
-            this.InsulinAmount.Name = "InsulinAmount";
-            this.InsulinAmount.ReadOnly = true;
-            this.InsulinAmount.Width = 119;
-            // 
-            // checkBox_EnableInsulin
-            // 
-            this.checkBox_EnableInsulin.AutoSize = true;
-            this.checkBox_EnableInsulin.Location = new System.Drawing.Point(6, 19);
-            this.checkBox_EnableInsulin.Name = "checkBox_EnableInsulin";
-            this.checkBox_EnableInsulin.Size = new System.Drawing.Size(80, 17);
-            this.checkBox_EnableInsulin.TabIndex = 13;
-            this.checkBox_EnableInsulin.Text = "Овозможи";
-            this.checkBox_EnableInsulin.UseVisualStyleBackColor = true;
-            this.checkBox_EnableInsulin.CheckedChanged += new System.EventHandler(this.checkBox_EnableInsulin_CheckedChanged);
             // 
             // checkBox_EnableMeasurement
             // 
@@ -291,13 +250,138 @@ namespace ProjectVP_DiabetesLog
             this.gb_DateAndTime.TabStop = false;
             this.gb_DateAndTime.Text = "Дата и време";
             // 
+            // listView1
+            // 
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.col_Type,
+            this.col_Manufacturer,
+            this.col_Carbs});
+            this.listView1.FullRowSelect = true;
+            this.listView1.GridLines = true;
+            this.listView1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(10, 154);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(486, 170);
+            this.listView1.TabIndex = 17;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            // 
+            // gb_Meal
+            // 
+            this.gb_Meal.Controls.Add(this.btn_AddFoodType);
+            this.gb_Meal.Controls.Add(this.btn_RemoveMeal);
+            this.gb_Meal.Controls.Add(this.listView1);
+            this.gb_Meal.Controls.Add(this.btn_AddMeal);
+            this.gb_Meal.Controls.Add(this.nud_AmountMeal);
+            this.gb_Meal.Controls.Add(this.cb_Food);
+            this.gb_Meal.Controls.Add(this.lbl_AmountMeal);
+            this.gb_Meal.Controls.Add(this.lbl_Food);
+            this.gb_Meal.Controls.Add(this.checkBox_EnableMeal);
+            this.gb_Meal.Location = new System.Drawing.Point(330, 12);
+            this.gb_Meal.Name = "gb_Meal";
+            this.gb_Meal.Size = new System.Drawing.Size(502, 336);
+            this.gb_Meal.TabIndex = 18;
+            this.gb_Meal.TabStop = false;
+            this.gb_Meal.Text = "Оброк";
+            // 
+            // checkBox_EnableMeal
+            // 
+            this.checkBox_EnableMeal.AutoSize = true;
+            this.checkBox_EnableMeal.Location = new System.Drawing.Point(7, 18);
+            this.checkBox_EnableMeal.Name = "checkBox_EnableMeal";
+            this.checkBox_EnableMeal.Size = new System.Drawing.Size(80, 17);
+            this.checkBox_EnableMeal.TabIndex = 0;
+            this.checkBox_EnableMeal.Text = "Овозможи";
+            this.checkBox_EnableMeal.UseVisualStyleBackColor = true;
+            // 
+            // lbl_Food
+            // 
+            this.lbl_Food.AutoSize = true;
+            this.lbl_Food.Location = new System.Drawing.Point(6, 44);
+            this.lbl_Food.Name = "lbl_Food";
+            this.lbl_Food.Size = new System.Drawing.Size(41, 13);
+            this.lbl_Food.TabIndex = 1;
+            this.lbl_Food.Text = "Храна:";
+            // 
+            // lbl_AmountMeal
+            // 
+            this.lbl_AmountMeal.AutoSize = true;
+            this.lbl_AmountMeal.Location = new System.Drawing.Point(7, 71);
+            this.lbl_AmountMeal.Name = "lbl_AmountMeal";
+            this.lbl_AmountMeal.Size = new System.Drawing.Size(58, 13);
+            this.lbl_AmountMeal.TabIndex = 2;
+            this.lbl_AmountMeal.Text = "Количина:";
+            // 
+            // cb_Food
+            // 
+            this.cb_Food.FormattingEnabled = true;
+            this.cb_Food.Location = new System.Drawing.Point(141, 41);
+            this.cb_Food.Name = "cb_Food";
+            this.cb_Food.Size = new System.Drawing.Size(121, 21);
+            this.cb_Food.TabIndex = 5;
+            // 
+            // nud_AmountMeal
+            // 
+            this.nud_AmountMeal.Location = new System.Drawing.Point(142, 69);
+            this.nud_AmountMeal.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.nud_AmountMeal.Name = "nud_AmountMeal";
+            this.nud_AmountMeal.Size = new System.Drawing.Size(120, 20);
+            this.nud_AmountMeal.TabIndex = 6;
+            // 
+            // btn_AddMeal
+            // 
+            this.btn_AddMeal.Location = new System.Drawing.Point(10, 106);
+            this.btn_AddMeal.Name = "btn_AddMeal";
+            this.btn_AddMeal.Size = new System.Drawing.Size(110, 23);
+            this.btn_AddMeal.TabIndex = 7;
+            this.btn_AddMeal.Text = "Додади оброк";
+            this.btn_AddMeal.UseVisualStyleBackColor = true;
+            // 
+            // btn_RemoveMeal
+            // 
+            this.btn_RemoveMeal.Location = new System.Drawing.Point(144, 106);
+            this.btn_RemoveMeal.Name = "btn_RemoveMeal";
+            this.btn_RemoveMeal.Size = new System.Drawing.Size(118, 23);
+            this.btn_RemoveMeal.TabIndex = 8;
+            this.btn_RemoveMeal.Text = "Отстрани оброк";
+            this.btn_RemoveMeal.UseVisualStyleBackColor = true;
+            // 
+            // col_Type
+            // 
+            this.col_Type.Text = "Тип";
+            this.col_Type.Width = 167;
+            // 
+            // col_Manufacturer
+            // 
+            this.col_Manufacturer.Text = "Производител";
+            this.col_Manufacturer.Width = 165;
+            // 
+            // col_Carbs
+            // 
+            this.col_Carbs.Text = "Јаглехидрати(100г)";
+            this.col_Carbs.Width = 109;
+            // 
+            // btn_AddFoodType
+            // 
+            this.btn_AddFoodType.Location = new System.Drawing.Point(306, 39);
+            this.btn_AddFoodType.Name = "btn_AddFoodType";
+            this.btn_AddFoodType.Size = new System.Drawing.Size(88, 23);
+            this.btn_AddFoodType.TabIndex = 18;
+            this.btn_AddFoodType.Text = "Додади храна";
+            this.btn_AddFoodType.UseVisualStyleBackColor = true;
+            // 
             // FormAddMeasurement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(943, 483);
+            this.Controls.Add(this.gb_Meal);
             this.Controls.Add(this.gb_DateAndTime);
-            this.Controls.Add(this.dgv_Measurement);
             this.Controls.Add(this.gb_Measurement);
             this.Controls.Add(this.gb_Insulin);
             this.Controls.Add(this.btn_Close);
@@ -310,9 +394,11 @@ namespace ProjectVP_DiabetesLog
             this.gb_Insulin.PerformLayout();
             this.gb_Measurement.ResumeLayout(false);
             this.gb_Measurement.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_Measurement)).EndInit();
             this.gb_DateAndTime.ResumeLayout(false);
             this.gb_DateAndTime.PerformLayout();
+            this.gb_Meal.ResumeLayout(false);
+            this.gb_Meal.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_AmountMeal)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -334,15 +420,22 @@ namespace ProjectVP_DiabetesLog
         private System.Windows.Forms.Button btn_InsulinAddType;
         private System.Windows.Forms.GroupBox gb_Insulin;
         private System.Windows.Forms.GroupBox gb_Measurement;
-        private System.Windows.Forms.DataGridView dgv_Measurement;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Date;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Time;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Measurement;
-        private System.Windows.Forms.DataGridViewTextBoxColumn InsulinType;
-        private System.Windows.Forms.DataGridViewTextBoxColumn InsulinAmount;
         private System.Windows.Forms.CheckBox checkBox_EnableInsulin;
         private System.Windows.Forms.CheckBox checkBox_EnableMeasurement;
         private System.Windows.Forms.GroupBox gb_DateAndTime;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ColumnHeader col_Type;
+        private System.Windows.Forms.ColumnHeader col_Manufacturer;
+        private System.Windows.Forms.ColumnHeader col_Carbs;
+        private System.Windows.Forms.GroupBox gb_Meal;
+        private System.Windows.Forms.Button btn_RemoveMeal;
+        private System.Windows.Forms.Button btn_AddMeal;
+        private System.Windows.Forms.NumericUpDown nud_AmountMeal;
+        private System.Windows.Forms.ComboBox cb_Food;
+        private System.Windows.Forms.Label lbl_AmountMeal;
+        private System.Windows.Forms.Label lbl_Food;
+        private System.Windows.Forms.CheckBox checkBox_EnableMeal;
+        private System.Windows.Forms.Button btn_AddFoodType;
     }
 }
 
