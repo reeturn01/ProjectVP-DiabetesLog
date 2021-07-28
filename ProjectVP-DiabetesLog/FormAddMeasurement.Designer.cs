@@ -60,6 +60,7 @@ namespace ProjectVP_DiabetesLog
             this.col_Manufacturer = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.col_Carbs = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btn_AddFoodType = new System.Windows.Forms.Button();
+            this.col_Amount = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             ((System.ComponentModel.ISupportInitialize)(this.nud_MeasuredValue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nud_InsulinAmount)).BeginInit();
             this.gb_Insulin.SuspendLayout();
@@ -256,7 +257,8 @@ namespace ProjectVP_DiabetesLog
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.col_Type,
             this.col_Manufacturer,
-            this.col_Carbs});
+            this.col_Carbs,
+            this.col_Amount});
             this.listView1.FullRowSelect = true;
             this.listView1.GridLines = true;
             this.listView1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
@@ -365,7 +367,7 @@ namespace ProjectVP_DiabetesLog
             // col_Manufacturer
             // 
             this.col_Manufacturer.Text = "Производител";
-            this.col_Manufacturer.Width = 165;
+            this.col_Manufacturer.Width = 106;
             // 
             // col_Carbs
             // 
@@ -381,6 +383,11 @@ namespace ProjectVP_DiabetesLog
             this.btn_AddFoodType.TabIndex = 18;
             this.btn_AddFoodType.Text = "Додади храна";
             this.btn_AddFoodType.UseVisualStyleBackColor = true;
+            // 
+            // col_Amount
+            // 
+            this.col_Amount.Text = "Количина(грами)";
+            this.col_Amount.Width = 97;
             // 
             // FormAddMeasurement
             // 
@@ -443,6 +450,7 @@ namespace ProjectVP_DiabetesLog
         private System.Windows.Forms.Label lbl_Food;
         private System.Windows.Forms.CheckBox checkBox_EnableMeal;
         private System.Windows.Forms.Button btn_AddFoodType;
+        private System.Windows.Forms.ColumnHeader col_Amount;
     }
 }
 
