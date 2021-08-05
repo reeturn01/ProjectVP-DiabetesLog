@@ -37,11 +37,12 @@ namespace ProjectVP_DiabetesLog
         private void btn_Add_Click(object sender, EventArgs e)
         {
             string name = tb_Name.Text.Trim();
-            string manufacturer = tb_Manufacturer.Text.Trim();
+            string brand = tb_Manufacturer.Text.Trim();
 
-            if (!CheckIfFormFieldsEmpty(name, manufacturer))
+            if (!CheckIfFormFieldsEmpty(name, brand))
             {
-                foodToAdd = new Food(name, manufacturer, Decimal.ToDouble(nud_Carbs.Value));
+                foodToAdd = new Food(name, brand, Decimal.ToDouble(nud_Carbs.Value));
+                DatabaseAccess.InsertFoodType(foodToAdd);
                 ep_AddFoodType.Clear();
                 this.DialogResult = DialogResult.OK;
             }

@@ -20,10 +20,10 @@ namespace ProjectVP_DiabetesLog
         private void btn_Add_Click(object sender, EventArgs e)
         {
             string insulinName = tb_InsulinName.Text.Trim();
-            string insulinManufacturer = tb_Manufacturer.Text.Trim();
-            if (!CheckIfFormFieldsEmpty(insulinName, insulinManufacturer))
+            string insulinBrand = tb_Manufacturer.Text.Trim();
+            if (!CheckIfFormFieldsEmpty(insulinName, insulinBrand))
             {
-                InsulinType tmp = new InsulinType(insulinName.ToUpper(), insulinManufacturer.ToUpper());
+                InsulinType tmp = new InsulinType(insulinName.ToUpper(), insulinBrand.ToUpper());
                 if (FormAddMeasurement.insulinTypes.Contains(tmp))
                 {
                     MessageBox.Show("Внесениот тип на инсулин веќе постои во листата.", "Постоечки тип!", MessageBoxButtons.OK);
@@ -32,6 +32,7 @@ namespace ProjectVP_DiabetesLog
                 {
                     ep_AddNewInsulinType.Clear();
                     FormAddMeasurement.insulinTypes.Add(tmp);
+                    DatabaseAccess.InsertInsulinType(tmp);
                     this.DialogResult = DialogResult.OK;
                 }
             }

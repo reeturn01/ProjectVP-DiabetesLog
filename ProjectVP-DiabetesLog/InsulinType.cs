@@ -9,12 +9,12 @@ namespace ProjectVP_DiabetesLog
     public class InsulinType
     {
         public string name { get; private set; }
-        public string manufacturer { get; private set; }
+        public string brand { get; private set; }
 
-        public InsulinType(string name, string manufacturer)
+        public InsulinType(string name, string brand)
         {
             this.name = name;
-            this.manufacturer = manufacturer;
+            this.brand = brand;
         }
         public override bool Equals(object obj)
         {
@@ -24,7 +24,7 @@ namespace ProjectVP_DiabetesLog
             {
                 InsulinType tmp = (InsulinType)obj;
                 if (this.name.Equals(tmp.name)
-                    && this.manufacturer.Equals(tmp.manufacturer))
+                    && this.brand.Equals(tmp.brand))
                 {
                     return true;
                 }
@@ -35,7 +35,7 @@ namespace ProjectVP_DiabetesLog
         {
             int hash = 17;
             hash = 31 * hash + name.GetHashCode();
-            hash = 31 * hash + manufacturer.GetHashCode();
+            hash = 31 * hash + brand.GetHashCode();
             return hash;
 
         }

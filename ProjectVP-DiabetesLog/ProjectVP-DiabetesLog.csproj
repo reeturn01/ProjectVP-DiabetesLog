@@ -73,6 +73,7 @@
       <DependentUpon>FormAddMeasurement.cs</DependentUpon>
     </Compile>
     <Compile Include="InsulinType.cs" />
+    <Compile Include="Meal.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormAddFoodType.resx">

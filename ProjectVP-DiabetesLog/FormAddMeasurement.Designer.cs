@@ -29,6 +29,7 @@ namespace ProjectVP_DiabetesLog
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.dtp_Date = new System.Windows.Forms.DateTimePicker();
             this.dtp_Time = new System.Windows.Forms.DateTimePicker();
             this.lbl_Date = new System.Windows.Forms.Label();
@@ -61,6 +62,7 @@ namespace ProjectVP_DiabetesLog
             this.lbl_AmountMeal = new System.Windows.Forms.Label();
             this.lbl_Food = new System.Windows.Forms.Label();
             this.checkBox_EnableMeal = new System.Windows.Forms.CheckBox();
+            this.errorProvider_AddMeasurement = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.nud_MeasuredValue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nud_InsulinAmount)).BeginInit();
             this.gb_Insulin.SuspendLayout();
@@ -68,6 +70,7 @@ namespace ProjectVP_DiabetesLog
             this.gb_DateAndTime.SuspendLayout();
             this.gb_Meal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nud_AmountMeal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider_AddMeasurement)).BeginInit();
             this.SuspendLayout();
             // 
             // dtp_Date
@@ -76,6 +79,7 @@ namespace ProjectVP_DiabetesLog
             this.dtp_Date.Name = "dtp_Date";
             this.dtp_Date.Size = new System.Drawing.Size(200, 20);
             this.dtp_Date.TabIndex = 0;
+            this.dtp_Date.ValueChanged += new System.EventHandler(this.dtp_Date_ValueChanged);
             // 
             // dtp_Time
             // 
@@ -167,6 +171,7 @@ namespace ProjectVP_DiabetesLog
             this.btn_Add.TabIndex = 10;
             this.btn_Add.Text = "Додади";
             this.btn_Add.UseVisualStyleBackColor = true;
+            this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
             // 
             // btn_Close
             // 
@@ -176,6 +181,7 @@ namespace ProjectVP_DiabetesLog
             this.btn_Close.TabIndex = 11;
             this.btn_Close.Text = "Затвори";
             this.btn_Close.UseVisualStyleBackColor = true;
+            this.btn_Close.Click += new System.EventHandler(this.btn_Close_Click);
             // 
             // btn_InsulinAddType
             // 
@@ -288,7 +294,7 @@ namespace ProjectVP_DiabetesLog
             // 
             // col_Amount
             // 
-            this.col_Amount.Text = "Количина(грами)";
+            this.col_Amount.Text = "Количина(грам)";
             this.col_Amount.Width = 97;
             // 
             // gb_Meal
@@ -369,9 +375,9 @@ namespace ProjectVP_DiabetesLog
             this.lbl_AmountMeal.AutoSize = true;
             this.lbl_AmountMeal.Location = new System.Drawing.Point(7, 71);
             this.lbl_AmountMeal.Name = "lbl_AmountMeal";
-            this.lbl_AmountMeal.Size = new System.Drawing.Size(58, 13);
+            this.lbl_AmountMeal.Size = new System.Drawing.Size(89, 13);
             this.lbl_AmountMeal.TabIndex = 2;
-            this.lbl_AmountMeal.Text = "Количина:";
+            this.lbl_AmountMeal.Text = "Количина(грам):";
             // 
             // lbl_Food
             // 
@@ -392,6 +398,10 @@ namespace ProjectVP_DiabetesLog
             this.checkBox_EnableMeal.Text = "Овозможи";
             this.checkBox_EnableMeal.UseVisualStyleBackColor = true;
             this.checkBox_EnableMeal.CheckedChanged += new System.EventHandler(this.checkBox_EnableMeal_CheckedChanged);
+            // 
+            // errorProvider_AddMeasurement
+            // 
+            this.errorProvider_AddMeasurement.ContainerControl = this;
             // 
             // FormAddMeasurement
             // 
@@ -417,6 +427,7 @@ namespace ProjectVP_DiabetesLog
             this.gb_Meal.ResumeLayout(false);
             this.gb_Meal.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nud_AmountMeal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider_AddMeasurement)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -455,6 +466,7 @@ namespace ProjectVP_DiabetesLog
         private System.Windows.Forms.CheckBox checkBox_EnableMeal;
         private System.Windows.Forms.Button btn_AddFoodType;
         private System.Windows.Forms.ColumnHeader col_Amount;
+        private System.Windows.Forms.ErrorProvider errorProvider_AddMeasurement;
     }
 }
 
