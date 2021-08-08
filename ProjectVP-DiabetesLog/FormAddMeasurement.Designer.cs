@@ -165,17 +165,17 @@ namespace ProjectVP_DiabetesLog
             // 
             // btn_Add
             // 
-            this.btn_Add.Location = new System.Drawing.Point(12, 365);
+            this.btn_Add.Location = new System.Drawing.Point(617, 365);
             this.btn_Add.Name = "btn_Add";
             this.btn_Add.Size = new System.Drawing.Size(107, 23);
             this.btn_Add.TabIndex = 10;
-            this.btn_Add.Text = "Додади";
+            this.btn_Add.Text = "Додади запис";
             this.btn_Add.UseVisualStyleBackColor = true;
             this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
             // 
             // btn_Close
             // 
-            this.btn_Close.Location = new System.Drawing.Point(177, 365);
+            this.btn_Close.Location = new System.Drawing.Point(757, 365);
             this.btn_Close.Name = "btn_Close";
             this.btn_Close.Size = new System.Drawing.Size(75, 23);
             this.btn_Close.TabIndex = 11;
@@ -407,7 +407,7 @@ namespace ProjectVP_DiabetesLog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(943, 483);
+            this.ClientSize = new System.Drawing.Size(875, 415);
             this.Controls.Add(this.gb_Meal);
             this.Controls.Add(this.gb_DateAndTime);
             this.Controls.Add(this.gb_Measurement);
