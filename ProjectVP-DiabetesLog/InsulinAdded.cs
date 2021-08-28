@@ -15,5 +15,9 @@ namespace ProjectVP_DiabetesLog
             this.insulin = insulin;
             this.amount = amount;
         }
+
+        public InsulinAdded()
+        {
+        }
     }
 }
