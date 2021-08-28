@@ -24,5 +24,10 @@ namespace ProjectVP_DiabetesLog
             dtp_Date.CustomFormat = "dd MMM yyyy";
             dtp_Date.Value = DateTime.Now;
         }
+
+        private void dtp_Date_ValueChanged(object sender, EventArgs e)
+        {
+            DateTime date = dtp_Date.Value.Date;
+        }
     }
 }
