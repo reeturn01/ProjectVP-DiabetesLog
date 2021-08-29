@@ -41,8 +41,7 @@ namespace ProjectVP_DiabetesLog
         }
         public override string ToString()
         {
-            //Prikazuva ime na Insulin
-            return name;
+            return name +" " + brand;
         }
         
     }

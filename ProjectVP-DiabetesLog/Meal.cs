@@ -3,13 +3,12 @@
     public class Meal
     {
         public Food food { get; }
-        public int amount { get; }
+        public double amount { get; }
 
-        public Meal(Food food, int amount)
+        public Meal(Food food, double? amount)
         {
             this.food = food;
-            this.amount = amount;
+            this.amount = amount.HasValue ? amount.Value : 0;
         }
-
     }
 }

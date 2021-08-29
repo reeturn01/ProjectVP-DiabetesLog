@@ -136,11 +136,19 @@ namespace ProjectVP_DiabetesLog
                 else
                 {
                     Food tmp = (Food)cb_Food.SelectedItem;
-                    meals.Add(new Meal(tmp, Decimal.ToInt32(nud_AmountMeal.Value)));
+                    if (meals.Any(item => item.food.Equals(tmp))) {
+                        MessageBox.Show("Типот на оброк веќе постои во листата!\nДоколку сакате да направите измена отстранете го од листата и додадете го повторно.");
+                    }
+                    else
+                    {
+                        
+                        meals.Add(new Meal(tmp, Decimal.ToInt32(nud_AmountMeal.Value)));
 
-                    ListViewItem viewItem = new ListViewItem(tmp.ToArray());
-                    viewItem.SubItems.Add(nud_AmountMeal.Value.ToString());
-                    listView_Meals.Items.Add(viewItem);
+                        ListViewItem viewItem = new ListViewItem(tmp.ToArray());
+                        viewItem.SubItems.Add(nud_AmountMeal.Value.ToString());
+                        listView_Meals.Items.Add(viewItem);
+                    }
+
                 }
                 
             }
@@ -187,7 +195,6 @@ namespace ProjectVP_DiabetesLog
                         DatabaseAccess.insertMeal(rowId, meal);
                     }
                 }
-                MessageBox.Show(rowId.ToString());
             }
             
         }
