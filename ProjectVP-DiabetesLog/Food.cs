@@ -12,11 +12,11 @@ namespace ProjectVP_DiabetesLog
         public string brand { get; private set; }
         public double carbs { get; private set; }
 
-        public Food(string name, string manufacturer, double carbs)
+        public Food(string name, string manufacturer, double? carbs)
         {
             this.name = name;
             this.brand = manufacturer;
-            this.carbs = carbs;
+            this.carbs = carbs.HasValue ? carbs.Value : 0;
         }
 
         public override bool Equals(object obj)

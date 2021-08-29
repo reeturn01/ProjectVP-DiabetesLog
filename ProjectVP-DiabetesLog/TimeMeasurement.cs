@@ -9,9 +9,9 @@ namespace ProjectVP_DiabetesLog
     public class TimeMeasurement
     {
         public DateTime time { get; private set; }
-        public double measurement { get; private set; }
-        public InsulinAdded insulinAdded { get; private set; }
-        public List<Meal> meals { get; private set; }
+        public double measurement { get; set; }
+        public InsulinAdded insulinAdded { get; set; }
+        public List<Meal> meals { get; set; }
 
         public TimeMeasurement(DateTime time) {
             this.time = time;
@@ -20,15 +20,31 @@ namespace ProjectVP_DiabetesLog
             meals = new List<Meal>();
         }
 
-        public TimeMeasurement(DateTime time, double measurement, InsulinAdded insulinAdded, List<Meal> meals) {
+        public TimeMeasurement(DateTime time, double? measurement, InsulinAdded insulinAdded, List<Meal> meals) {
             this.time = time;
-            this.measurement = measurement;
+            this.measurement = measurement.HasValue ? measurement.Value : 0;
             this.insulinAdded = insulinAdded;
             this.meals = meals;
+        }
+        public TimeMeasurement(DateTime time, double? measurement, InsulinAdded insulinAdded)
+        {
+            this.time = time;
+            this.measurement = measurement.HasValue ? measurement.Value : 0;
+            this.insulinAdded = insulinAdded;
+            this.meals = new List<Meal>();
         }
 
         public void addMeal(Meal mealToAdd) {
             meals.Add(mealToAdd);
+        }
+        public bool matchingTime(string timeVal) {
+            return time.ToString("HH:mm").Equals(timeVal);
+        }
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append(time.ToString("HH:mm")).Append(" ").Append(measurement).Append(" ").Append(insulinAdded);
+            return sb.ToString();
         }
     }
 }

@@ -221,6 +221,63 @@ namespace ProjectVP_DiabetesLog
             }
         }
 
-        public static 
+        public static List<TimeMeasurement> MeasurementsOnDate(DateTime date) {
+            List<TimeMeasurement> timeMeasurements = new List<TimeMeasurement>();
+            List<int> ids = new List<int>();
+            using (SQLiteConnection connection = new SQLiteConnection(LoadConnectionString()))
+            {
+                string querry = "SELECT MeasurementId, Time, MeasuredValue, AddedInsulin.InsulinAmount, Insulin.Name, Insulin.Brand FROM Measurement LEFT JOIN AddedInsulin USING(AddedInsulinId) LEFT JOIN Insulin ON AddedInsulin.AddedInsulinId = Insulin.InsulinId WHERE Date = @date ORDER BY Time ASC";
+                using (SQLiteCommand command = new SQLiteCommand(querry,connection))
+                {
+ 
+                    
+                    command.Parameters.Add("@date", System.Data.DbType.String).Value = date.ToString("yyyy-MM-dd");
+                    connection.Open();
+                    using (SQLiteDataReader reader = command.ExecuteReader())
+                    {
+                        
+                        while (reader.Read())
+                        {
+                            ids.Add(reader.GetInt32(0));
+                            String time = reader.GetString(1);
+                            double measuredValue = reader.IsDBNull(2) ? 0 : reader.GetDouble(2);
+                            int insulinAmount = reader.IsDBNull(3) ? 0 : reader.GetInt32(3);
+                            String insulinName = reader.IsDBNull(4) ? "" : reader.GetString(4);
+                            String insulinBrand = reader.IsDBNull(5) ? "" : reader.GetString(5);
+
+                            timeMeasurements.Add(new TimeMeasurement(DateTime.Parse(time), measuredValue, new InsulinAdded(new InsulinType(insulinName, insulinBrand), insulinAmount)));
+                        }
+                        reader.Close();
+                    }
+                    connection.Close();
+                }
+                if (ids.Count > 0)
+                {
+                    querry = "SELECT Food.Name, Food.Brand, Food.Carbs, MeasurementFood.AmountInGrams FROM MeasurementFood LEFT JOIN Food USING(FoodId) WHERE MeasurementId = @id";
+                    using (SQLiteCommand command = new SQLiteCommand(querry, connection))
+                    {
+                        for (int i = 0, size = ids.Count; i < size; ++i)
+                        {
+                            command.Parameters.Add("@id", System.Data.DbType.Int32).Value = ids[i];
+                            connection.Open();
+                            using (SQLiteDataReader reader = command.ExecuteReader())
+                            {
+                                while (reader.Read()) {
+                                    String name = reader.IsDBNull(0) ?  "" : reader.GetString(0);
+                                    String manufacturer = reader.IsDBNull(1) ? "" : reader.GetString(1);
+                                    double carbs = reader.IsDBNull(2) ? 0 : reader.GetDouble(2);
+                                    double amountInGrams = reader.IsDBNull(3) ? 0 : reader.GetDouble(3);
+                                    timeMeasurements[i].addMeal(new Meal(new Food(name, manufacturer, carbs), amountInGrams));
+                                }
+                                
+                                reader.Close();
+                            }
+                            connection.Close();
+                        }
+                    }
+                }
+            }
+            return timeMeasurements;
+        }
     }
 }

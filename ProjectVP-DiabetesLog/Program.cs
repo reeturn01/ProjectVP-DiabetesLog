@@ -16,7 +16,7 @@ namespace ProjectVP_DiabetesLog
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormSearchMeasurements());
+            Application.Run(new FormOptions());
         }
     }
 }
