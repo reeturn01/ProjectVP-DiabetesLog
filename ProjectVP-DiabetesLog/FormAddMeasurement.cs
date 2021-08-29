@@ -148,7 +148,7 @@ namespace ProjectVP_DiabetesLog
                         viewItem.SubItems.Add(nud_AmountMeal.Value.ToString());
                         listView_Meals.Items.Add(viewItem);
                     }
-
+                    
                 }
                 
             }
