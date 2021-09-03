@@ -45,14 +45,14 @@ namespace ProjectVP_DiabetesLog
             this.tb_InsulinName.Location = new System.Drawing.Point(142, 43);
             this.tb_InsulinName.Name = "tb_InsulinName";
             this.tb_InsulinName.Size = new System.Drawing.Size(100, 20);
-            this.tb_InsulinName.TabIndex = 0;
+            this.tb_InsulinName.TabIndex = 1;
             // 
             // btn_Add
             // 
             this.btn_Add.Location = new System.Drawing.Point(48, 114);
             this.btn_Add.Name = "btn_Add";
             this.btn_Add.Size = new System.Drawing.Size(75, 23);
-            this.btn_Add.TabIndex = 1;
+            this.btn_Add.TabIndex = 4;
             this.btn_Add.Text = "Додади";
             this.btn_Add.UseVisualStyleBackColor = true;
             this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
@@ -62,7 +62,7 @@ namespace ProjectVP_DiabetesLog
             this.btn_Cancel.Location = new System.Drawing.Point(167, 114);
             this.btn_Cancel.Name = "btn_Cancel";
             this.btn_Cancel.Size = new System.Drawing.Size(75, 23);
-            this.btn_Cancel.TabIndex = 2;
+            this.btn_Cancel.TabIndex = 5;
             this.btn_Cancel.Text = "Откажи";
             this.btn_Cancel.UseVisualStyleBackColor = true;
             this.btn_Cancel.Click += new System.EventHandler(this.btn_Cancel_Click);
@@ -73,7 +73,7 @@ namespace ProjectVP_DiabetesLog
             this.lbl_InsulinName.Location = new System.Drawing.Point(45, 46);
             this.lbl_InsulinName.Name = "lbl_InsulinName";
             this.lbl_InsulinName.Size = new System.Drawing.Size(91, 13);
-            this.lbl_InsulinName.TabIndex = 3;
+            this.lbl_InsulinName.TabIndex = 0;
             this.lbl_InsulinName.Text = "Име на инсулин:";
             // 
             // ep_AddNewInsulinType
@@ -85,7 +85,7 @@ namespace ProjectVP_DiabetesLog
             this.tb_Manufacturer.Location = new System.Drawing.Point(142, 70);
             this.tb_Manufacturer.Name = "tb_Manufacturer";
             this.tb_Manufacturer.Size = new System.Drawing.Size(100, 20);
-            this.tb_Manufacturer.TabIndex = 4;
+            this.tb_Manufacturer.TabIndex = 3;
             // 
             // lbl_Manufacturer
             // 
@@ -93,7 +93,7 @@ namespace ProjectVP_DiabetesLog
             this.lbl_Manufacturer.Location = new System.Drawing.Point(45, 73);
             this.lbl_Manufacturer.Name = "lbl_Manufacturer";
             this.lbl_Manufacturer.Size = new System.Drawing.Size(83, 13);
-            this.lbl_Manufacturer.TabIndex = 5;
+            this.lbl_Manufacturer.TabIndex = 2;
             this.lbl_Manufacturer.Text = "Производител:";
             // 
             // FormAddNewInsulinType

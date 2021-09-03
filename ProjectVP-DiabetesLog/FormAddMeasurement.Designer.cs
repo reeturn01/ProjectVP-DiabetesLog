@@ -78,14 +78,14 @@ namespace ProjectVP_DiabetesLog
             this.dtp_Date.Location = new System.Drawing.Point(55, 22);
             this.dtp_Date.Name = "dtp_Date";
             this.dtp_Date.Size = new System.Drawing.Size(200, 20);
-            this.dtp_Date.TabIndex = 0;
+            this.dtp_Date.TabIndex = 1;
             // 
             // dtp_Time
             // 
             this.dtp_Time.Location = new System.Drawing.Point(55, 54);
             this.dtp_Time.Name = "dtp_Time";
             this.dtp_Time.Size = new System.Drawing.Size(200, 20);
-            this.dtp_Time.TabIndex = 1;
+            this.dtp_Time.TabIndex = 3;
             // 
             // lbl_Date
             // 
@@ -93,7 +93,7 @@ namespace ProjectVP_DiabetesLog
             this.lbl_Date.Location = new System.Drawing.Point(6, 29);
             this.lbl_Date.Name = "lbl_Date";
             this.lbl_Date.Size = new System.Drawing.Size(36, 13);
-            this.lbl_Date.TabIndex = 2;
+            this.lbl_Date.TabIndex = 0;
             this.lbl_Date.Text = "Дата:";
             // 
             // lbl_Time
@@ -102,7 +102,7 @@ namespace ProjectVP_DiabetesLog
             this.lbl_Time.Location = new System.Drawing.Point(6, 60);
             this.lbl_Time.Name = "lbl_Time";
             this.lbl_Time.Size = new System.Drawing.Size(43, 13);
-            this.lbl_Time.TabIndex = 3;
+            this.lbl_Time.TabIndex = 2;
             this.lbl_Time.Text = "Време:";
             // 
             // lbl_MeasuredValue
@@ -111,7 +111,7 @@ namespace ProjectVP_DiabetesLog
             this.lbl_MeasuredValue.Location = new System.Drawing.Point(6, 48);
             this.lbl_MeasuredValue.Name = "lbl_MeasuredValue";
             this.lbl_MeasuredValue.Size = new System.Drawing.Size(112, 13);
-            this.lbl_MeasuredValue.TabIndex = 4;
+            this.lbl_MeasuredValue.TabIndex = 1;
             this.lbl_MeasuredValue.Text = "Измерена вредност:";
             // 
             // nud_MeasuredValue
@@ -125,7 +125,7 @@ namespace ProjectVP_DiabetesLog
             this.nud_MeasuredValue.Location = new System.Drawing.Point(135, 48);
             this.nud_MeasuredValue.Name = "nud_MeasuredValue";
             this.nud_MeasuredValue.Size = new System.Drawing.Size(120, 20);
-            this.nud_MeasuredValue.TabIndex = 5;
+            this.nud_MeasuredValue.TabIndex = 2;
             // 
             // lbl_InsulinType
             // 
@@ -133,7 +133,7 @@ namespace ProjectVP_DiabetesLog
             this.lbl_InsulinType.Location = new System.Drawing.Point(6, 45);
             this.lbl_InsulinType.Name = "lbl_InsulinType";
             this.lbl_InsulinType.Size = new System.Drawing.Size(88, 13);
-            this.lbl_InsulinType.TabIndex = 6;
+            this.lbl_InsulinType.TabIndex = 1;
             this.lbl_InsulinType.Text = "Тип на инсулин:";
             // 
             // lbl_InsulinAmount
@@ -142,7 +142,7 @@ namespace ProjectVP_DiabetesLog
             this.lbl_InsulinAmount.Location = new System.Drawing.Point(6, 72);
             this.lbl_InsulinAmount.Name = "lbl_InsulinAmount";
             this.lbl_InsulinAmount.Size = new System.Drawing.Size(58, 13);
-            this.lbl_InsulinAmount.TabIndex = 7;
+            this.lbl_InsulinAmount.TabIndex = 3;
             this.lbl_InsulinAmount.Text = "Количина:";
             // 
             // cb_InsulinType
@@ -152,7 +152,7 @@ namespace ProjectVP_DiabetesLog
             this.cb_InsulinType.Location = new System.Drawing.Point(134, 42);
             this.cb_InsulinType.Name = "cb_InsulinType";
             this.cb_InsulinType.Size = new System.Drawing.Size(121, 21);
-            this.cb_InsulinType.TabIndex = 8;
+            this.cb_InsulinType.TabIndex = 2;
             // 
             // nud_InsulinAmount
             // 
@@ -160,14 +160,14 @@ namespace ProjectVP_DiabetesLog
             this.nud_InsulinAmount.Location = new System.Drawing.Point(134, 70);
             this.nud_InsulinAmount.Name = "nud_InsulinAmount";
             this.nud_InsulinAmount.Size = new System.Drawing.Size(120, 20);
-            this.nud_InsulinAmount.TabIndex = 9;
+            this.nud_InsulinAmount.TabIndex = 4;
             // 
             // btn_Add
             // 
             this.btn_Add.Location = new System.Drawing.Point(617, 365);
             this.btn_Add.Name = "btn_Add";
             this.btn_Add.Size = new System.Drawing.Size(107, 23);
-            this.btn_Add.TabIndex = 10;
+            this.btn_Add.TabIndex = 4;
             this.btn_Add.Text = "Додади запис";
             this.btn_Add.UseVisualStyleBackColor = true;
             this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
@@ -177,7 +177,7 @@ namespace ProjectVP_DiabetesLog
             this.btn_Close.Location = new System.Drawing.Point(757, 365);
             this.btn_Close.Name = "btn_Close";
             this.btn_Close.Size = new System.Drawing.Size(75, 23);
-            this.btn_Close.TabIndex = 11;
+            this.btn_Close.TabIndex = 5;
             this.btn_Close.Text = "Затвори";
             this.btn_Close.UseVisualStyleBackColor = true;
             this.btn_Close.Click += new System.EventHandler(this.btn_Close_Click);
@@ -188,7 +188,7 @@ namespace ProjectVP_DiabetesLog
             this.btn_InsulinAddType.Location = new System.Drawing.Point(9, 102);
             this.btn_InsulinAddType.Name = "btn_InsulinAddType";
             this.btn_InsulinAddType.Size = new System.Drawing.Size(103, 23);
-            this.btn_InsulinAddType.TabIndex = 12;
+            this.btn_InsulinAddType.TabIndex = 5;
             this.btn_InsulinAddType.Text = "Додади нов тип";
             this.btn_InsulinAddType.UseVisualStyleBackColor = true;
             this.btn_InsulinAddType.Click += new System.EventHandler(this.btn_InsulinAddType_Click);
@@ -204,7 +204,7 @@ namespace ProjectVP_DiabetesLog
             this.gb_Insulin.Location = new System.Drawing.Point(12, 208);
             this.gb_Insulin.Name = "gb_Insulin";
             this.gb_Insulin.Size = new System.Drawing.Size(278, 140);
-            this.gb_Insulin.TabIndex = 13;
+            this.gb_Insulin.TabIndex = 2;
             this.gb_Insulin.TabStop = false;
             this.gb_Insulin.Text = "Инсулин";
             // 
@@ -214,7 +214,7 @@ namespace ProjectVP_DiabetesLog
             this.checkBox_EnableInsulin.Location = new System.Drawing.Point(6, 19);
             this.checkBox_EnableInsulin.Name = "checkBox_EnableInsulin";
             this.checkBox_EnableInsulin.Size = new System.Drawing.Size(80, 17);
-            this.checkBox_EnableInsulin.TabIndex = 13;
+            this.checkBox_EnableInsulin.TabIndex = 0;
             this.checkBox_EnableInsulin.Text = "Овозможи";
             this.checkBox_EnableInsulin.UseVisualStyleBackColor = true;
             this.checkBox_EnableInsulin.CheckedChanged += new System.EventHandler(this.checkBox_EnableInsulin_CheckedChanged);
@@ -227,7 +227,7 @@ namespace ProjectVP_DiabetesLog
             this.gb_Measurement.Location = new System.Drawing.Point(12, 118);
             this.gb_Measurement.Name = "gb_Measurement";
             this.gb_Measurement.Size = new System.Drawing.Size(278, 84);
-            this.gb_Measurement.TabIndex = 14;
+            this.gb_Measurement.TabIndex = 1;
             this.gb_Measurement.TabStop = false;
             this.gb_Measurement.Text = "Мерење";
             // 
@@ -239,7 +239,7 @@ namespace ProjectVP_DiabetesLog
             this.checkBox_EnableMeasurement.Location = new System.Drawing.Point(6, 19);
             this.checkBox_EnableMeasurement.Name = "checkBox_EnableMeasurement";
             this.checkBox_EnableMeasurement.Size = new System.Drawing.Size(80, 17);
-            this.checkBox_EnableMeasurement.TabIndex = 6;
+            this.checkBox_EnableMeasurement.TabIndex = 0;
             this.checkBox_EnableMeasurement.Text = "Овозможи";
             this.checkBox_EnableMeasurement.UseVisualStyleBackColor = true;
             this.checkBox_EnableMeasurement.CheckedChanged += new System.EventHandler(this.checkBox_EnableMeasurement_CheckedChanged);
@@ -253,7 +253,7 @@ namespace ProjectVP_DiabetesLog
             this.gb_DateAndTime.Location = new System.Drawing.Point(12, 12);
             this.gb_DateAndTime.Name = "gb_DateAndTime";
             this.gb_DateAndTime.Size = new System.Drawing.Size(278, 100);
-            this.gb_DateAndTime.TabIndex = 16;
+            this.gb_DateAndTime.TabIndex = 0;
             this.gb_DateAndTime.TabStop = false;
             this.gb_DateAndTime.Text = "Дата и време";
             // 
@@ -272,7 +272,8 @@ namespace ProjectVP_DiabetesLog
             this.listView_Meals.MultiSelect = false;
             this.listView_Meals.Name = "listView_Meals";
             this.listView_Meals.Size = new System.Drawing.Size(486, 170);
-            this.listView_Meals.TabIndex = 17;
+            this.listView_Meals.TabIndex = 8;
+            this.listView_Meals.TabStop = false;
             this.listView_Meals.UseCompatibleStateImageBehavior = false;
             this.listView_Meals.View = System.Windows.Forms.View.Details;
             // 
@@ -310,7 +311,7 @@ namespace ProjectVP_DiabetesLog
             this.gb_Meal.Location = new System.Drawing.Point(330, 12);
             this.gb_Meal.Name = "gb_Meal";
             this.gb_Meal.Size = new System.Drawing.Size(502, 336);
-            this.gb_Meal.TabIndex = 18;
+            this.gb_Meal.TabIndex = 3;
             this.gb_Meal.TabStop = false;
             this.gb_Meal.Text = "Оброк";
             // 
@@ -320,7 +321,7 @@ namespace ProjectVP_DiabetesLog
             this.btn_AddFoodType.Location = new System.Drawing.Point(306, 39);
             this.btn_AddFoodType.Name = "btn_AddFoodType";
             this.btn_AddFoodType.Size = new System.Drawing.Size(88, 23);
-            this.btn_AddFoodType.TabIndex = 18;
+            this.btn_AddFoodType.TabIndex = 3;
             this.btn_AddFoodType.Text = "Додади храна";
             this.btn_AddFoodType.UseVisualStyleBackColor = true;
             this.btn_AddFoodType.Click += new System.EventHandler(this.btn_AddFoodType_Click);
@@ -331,7 +332,7 @@ namespace ProjectVP_DiabetesLog
             this.btn_RemoveMeal.Location = new System.Drawing.Point(144, 106);
             this.btn_RemoveMeal.Name = "btn_RemoveMeal";
             this.btn_RemoveMeal.Size = new System.Drawing.Size(118, 23);
-            this.btn_RemoveMeal.TabIndex = 8;
+            this.btn_RemoveMeal.TabIndex = 7;
             this.btn_RemoveMeal.Text = "Отстрани оброк";
             this.btn_RemoveMeal.UseVisualStyleBackColor = true;
             this.btn_RemoveMeal.Click += new System.EventHandler(this.btn_RemoveMeal_Click);
@@ -342,7 +343,7 @@ namespace ProjectVP_DiabetesLog
             this.btn_AddMeal.Location = new System.Drawing.Point(10, 106);
             this.btn_AddMeal.Name = "btn_AddMeal";
             this.btn_AddMeal.Size = new System.Drawing.Size(110, 23);
-            this.btn_AddMeal.TabIndex = 7;
+            this.btn_AddMeal.TabIndex = 6;
             this.btn_AddMeal.Text = "Додади оброк";
             this.btn_AddMeal.UseVisualStyleBackColor = true;
             this.btn_AddMeal.Click += new System.EventHandler(this.btn_AddMeal_Click);
@@ -358,7 +359,7 @@ namespace ProjectVP_DiabetesLog
             0});
             this.nud_AmountMeal.Name = "nud_AmountMeal";
             this.nud_AmountMeal.Size = new System.Drawing.Size(120, 20);
-            this.nud_AmountMeal.TabIndex = 6;
+            this.nud_AmountMeal.TabIndex = 5;
             // 
             // cb_Food
             // 
@@ -367,7 +368,7 @@ namespace ProjectVP_DiabetesLog
             this.cb_Food.Location = new System.Drawing.Point(141, 41);
             this.cb_Food.Name = "cb_Food";
             this.cb_Food.Size = new System.Drawing.Size(121, 21);
-            this.cb_Food.TabIndex = 5;
+            this.cb_Food.TabIndex = 2;
             // 
             // lbl_AmountMeal
             // 
@@ -375,7 +376,7 @@ namespace ProjectVP_DiabetesLog
             this.lbl_AmountMeal.Location = new System.Drawing.Point(7, 71);
             this.lbl_AmountMeal.Name = "lbl_AmountMeal";
             this.lbl_AmountMeal.Size = new System.Drawing.Size(89, 13);
-            this.lbl_AmountMeal.TabIndex = 2;
+            this.lbl_AmountMeal.TabIndex = 4;
             this.lbl_AmountMeal.Text = "Количина(грам):";
             // 
             // lbl_Food

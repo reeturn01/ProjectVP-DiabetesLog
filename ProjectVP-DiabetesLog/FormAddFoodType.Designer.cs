@@ -58,7 +58,7 @@ namespace ProjectVP_DiabetesLog
             this.lbl_Manufacturer.Location = new System.Drawing.Point(27, 95);
             this.lbl_Manufacturer.Name = "lbl_Manufacturer";
             this.lbl_Manufacturer.Size = new System.Drawing.Size(83, 13);
-            this.lbl_Manufacturer.TabIndex = 1;
+            this.lbl_Manufacturer.TabIndex = 2;
             this.lbl_Manufacturer.Text = "Производител:";
             // 
             // lbl_Carbs
@@ -67,7 +67,7 @@ namespace ProjectVP_DiabetesLog
             this.lbl_Carbs.Location = new System.Drawing.Point(27, 143);
             this.lbl_Carbs.Name = "lbl_Carbs";
             this.lbl_Carbs.Size = new System.Drawing.Size(78, 13);
-            this.lbl_Carbs.TabIndex = 2;
+            this.lbl_Carbs.TabIndex = 4;
             this.lbl_Carbs.Text = "Јаглехидрати:";
             // 
             // tb_Name
@@ -75,14 +75,14 @@ namespace ProjectVP_DiabetesLog
             this.tb_Name.Location = new System.Drawing.Point(126, 38);
             this.tb_Name.Name = "tb_Name";
             this.tb_Name.Size = new System.Drawing.Size(120, 20);
-            this.tb_Name.TabIndex = 3;
+            this.tb_Name.TabIndex = 1;
             // 
             // tb_Manufacturer
             // 
             this.tb_Manufacturer.Location = new System.Drawing.Point(126, 92);
             this.tb_Manufacturer.Name = "tb_Manufacturer";
             this.tb_Manufacturer.Size = new System.Drawing.Size(120, 20);
-            this.tb_Manufacturer.TabIndex = 4;
+            this.tb_Manufacturer.TabIndex = 3;
             // 
             // nud_Carbs
             // 

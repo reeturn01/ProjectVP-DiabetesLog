@@ -58,7 +58,7 @@ namespace ProjectVP_DiabetesLog
             this.btn_Search.Location = new System.Drawing.Point(12, 56);
             this.btn_Search.Name = "btn_Search";
             this.btn_Search.Size = new System.Drawing.Size(75, 23);
-            this.btn_Search.TabIndex = 2;
+            this.btn_Search.TabIndex = 1;
             this.btn_Search.Text = "Пребарај";
             this.btn_Search.UseVisualStyleBackColor = true;
             this.btn_Search.Click += new System.EventHandler(this.btn_Search_Click);
@@ -79,7 +79,7 @@ namespace ProjectVP_DiabetesLog
             this.listView_Measurements.MultiSelect = false;
             this.listView_Measurements.Name = "listView_Measurements";
             this.listView_Measurements.Size = new System.Drawing.Size(549, 172);
-            this.listView_Measurements.TabIndex = 3;
+            this.listView_Measurements.TabIndex = 2;
             this.listView_Measurements.UseCompatibleStateImageBehavior = false;
             this.listView_Measurements.View = System.Windows.Forms.View.Details;
             this.listView_Measurements.ItemSelectionChanged += new System.Windows.Forms.ListViewItemSelectionChangedEventHandler(this.listView_Measurements_ItemSelectionChanged);
@@ -121,7 +121,7 @@ namespace ProjectVP_DiabetesLog
             this.dgv_Meals.Location = new System.Drawing.Point(239, 249);
             this.dgv_Meals.Name = "dgv_Meals";
             this.dgv_Meals.Size = new System.Drawing.Size(549, 146);
-            this.dgv_Meals.TabIndex = 4;
+            this.dgv_Meals.TabIndex = 3;
             // 
             // col_FoodName
             // 
@@ -149,7 +149,7 @@ namespace ProjectVP_DiabetesLog
             this.btn_Close.Location = new System.Drawing.Point(12, 372);
             this.btn_Close.Name = "btn_Close";
             this.btn_Close.Size = new System.Drawing.Size(75, 23);
-            this.btn_Close.TabIndex = 5;
+            this.btn_Close.TabIndex = 4;
             this.btn_Close.Text = "Затвори";
             this.btn_Close.UseVisualStyleBackColor = false;
             this.btn_Close.Click += new System.EventHandler(this.btn_Exit_Click);
