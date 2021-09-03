@@ -10,5 +10,10 @@
             this.food = food;
             this.amount = amount.HasValue ? amount.Value : 0;
         }
+
+        public bool matchingFood(string name, string brand, double carbs)
+        {
+            return food.name.Equals(name) && food.brand.Equals(brand) && food.carbs.Equals(carbs);
+        }
     }
 }

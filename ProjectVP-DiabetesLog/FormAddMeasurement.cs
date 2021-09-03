@@ -156,8 +156,13 @@ namespace ProjectVP_DiabetesLog
 
         private void btn_RemoveMeal_Click(object sender, EventArgs e)
         {
-            if (listView_Meals.SelectedIndices.Count != 0)
+            if (listView_Meals.SelectedIndices.Count > 0)
             {
+                string name = listView_Meals.SelectedItems[0].SubItems[0].Text;
+                string brand = listView_Meals.SelectedItems[0].SubItems[1].Text;
+                double carbs = Double.Parse(listView_Meals.SelectedItems[0].SubItems[2].Text);
+                int mealToRemoveIndex = meals.FindIndex(meal => meal.matchingFood(name, brand, carbs));
+                meals.RemoveAt(mealToRemoveIndex);
                 listView_Meals.Items.Remove(listView_Meals.SelectedItems[0]);
             }
         }
