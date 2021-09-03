@@ -79,7 +79,6 @@ namespace ProjectVP_DiabetesLog
             this.dtp_Date.Name = "dtp_Date";
             this.dtp_Date.Size = new System.Drawing.Size(200, 20);
             this.dtp_Date.TabIndex = 0;
-            this.dtp_Date.ValueChanged += new System.EventHandler(this.dtp_Date_ValueChanged);
             // 
             // dtp_Time
             // 

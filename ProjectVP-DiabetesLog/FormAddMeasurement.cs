@@ -167,11 +167,6 @@ namespace ProjectVP_DiabetesLog
             }
         }
 
-        private void dtp_Date_ValueChanged(object sender, EventArgs e)
-        {
-           // DatabaseAccess.DateRecords(dtp_Date.Value.Date);
-        }
-
         private void btn_Close_Click(object sender, EventArgs e)
         {
             this.Close();
