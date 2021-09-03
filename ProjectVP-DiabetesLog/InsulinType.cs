@@ -41,7 +41,7 @@ namespace ProjectVP_DiabetesLog
         }
         public override string ToString()
         {
-            return name +" " + brand;
+            return name +", " + brand;
         }
         
     }
