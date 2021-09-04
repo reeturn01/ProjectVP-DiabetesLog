@@ -195,8 +195,18 @@ namespace ProjectVP_DiabetesLog
                         DatabaseAccess.insertMeal(rowId, meal);
                     }
                 }
+                resetControlsToDefault();
             }
             
+        }
+
+        private void resetControlsToDefault()
+        {
+            meals.Clear();
+            listView_Meals.Items.Clear();
+            nud_AmountMeal.Value = 0;
+            nud_InsulinAmount.Value = 0;
+            nud_MeasuredValue.Value = 0;
         }
 
         private bool CheckForErrors()
