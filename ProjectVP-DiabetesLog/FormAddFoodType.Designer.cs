@@ -46,7 +46,7 @@ namespace ProjectVP_DiabetesLog
             // lbl_Name
             // 
             this.lbl_Name.AutoSize = true;
-            this.lbl_Name.Location = new System.Drawing.Point(27, 41);
+            this.lbl_Name.Location = new System.Drawing.Point(22, 27);
             this.lbl_Name.Name = "lbl_Name";
             this.lbl_Name.Size = new System.Drawing.Size(32, 13);
             this.lbl_Name.TabIndex = 0;
@@ -55,7 +55,7 @@ namespace ProjectVP_DiabetesLog
             // lbl_Manufacturer
             // 
             this.lbl_Manufacturer.AutoSize = true;
-            this.lbl_Manufacturer.Location = new System.Drawing.Point(27, 95);
+            this.lbl_Manufacturer.Location = new System.Drawing.Point(22, 65);
             this.lbl_Manufacturer.Name = "lbl_Manufacturer";
             this.lbl_Manufacturer.Size = new System.Drawing.Size(83, 13);
             this.lbl_Manufacturer.TabIndex = 2;
@@ -64,7 +64,7 @@ namespace ProjectVP_DiabetesLog
             // lbl_Carbs
             // 
             this.lbl_Carbs.AutoSize = true;
-            this.lbl_Carbs.Location = new System.Drawing.Point(27, 143);
+            this.lbl_Carbs.Location = new System.Drawing.Point(22, 103);
             this.lbl_Carbs.Name = "lbl_Carbs";
             this.lbl_Carbs.Size = new System.Drawing.Size(78, 13);
             this.lbl_Carbs.TabIndex = 4;
@@ -72,14 +72,14 @@ namespace ProjectVP_DiabetesLog
             // 
             // tb_Name
             // 
-            this.tb_Name.Location = new System.Drawing.Point(126, 38);
+            this.tb_Name.Location = new System.Drawing.Point(121, 32);
             this.tb_Name.Name = "tb_Name";
             this.tb_Name.Size = new System.Drawing.Size(120, 20);
             this.tb_Name.TabIndex = 1;
             // 
             // tb_Manufacturer
             // 
-            this.tb_Manufacturer.Location = new System.Drawing.Point(126, 92);
+            this.tb_Manufacturer.Location = new System.Drawing.Point(121, 70);
             this.tb_Manufacturer.Name = "tb_Manufacturer";
             this.tb_Manufacturer.Size = new System.Drawing.Size(120, 20);
             this.tb_Manufacturer.TabIndex = 3;
@@ -87,14 +87,14 @@ namespace ProjectVP_DiabetesLog
             // nud_Carbs
             // 
             this.nud_Carbs.DecimalPlaces = 2;
-            this.nud_Carbs.Location = new System.Drawing.Point(126, 141);
+            this.nud_Carbs.Location = new System.Drawing.Point(121, 103);
             this.nud_Carbs.Name = "nud_Carbs";
             this.nud_Carbs.Size = new System.Drawing.Size(120, 20);
             this.nud_Carbs.TabIndex = 5;
             // 
             // btn_Add
             // 
-            this.btn_Add.Location = new System.Drawing.Point(35, 222);
+            this.btn_Add.Location = new System.Drawing.Point(25, 152);
             this.btn_Add.Name = "btn_Add";
             this.btn_Add.Size = new System.Drawing.Size(75, 23);
             this.btn_Add.TabIndex = 6;
@@ -104,7 +104,7 @@ namespace ProjectVP_DiabetesLog
             // 
             // btn_Cancel
             // 
-            this.btn_Cancel.Location = new System.Drawing.Point(171, 222);
+            this.btn_Cancel.Location = new System.Drawing.Point(166, 152);
             this.btn_Cancel.Name = "btn_Cancel";
             this.btn_Cancel.Size = new System.Drawing.Size(75, 23);
             this.btn_Cancel.TabIndex = 7;
@@ -120,7 +120,7 @@ namespace ProjectVP_DiabetesLog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(367, 313);
+            this.ClientSize = new System.Drawing.Size(299, 219);
             this.Controls.Add(this.btn_Cancel);
             this.Controls.Add(this.btn_Add);
             this.Controls.Add(this.nud_Carbs);
