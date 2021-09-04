@@ -185,7 +185,7 @@ namespace ProjectVP_DiabetesLog
                     using (SQLiteDataReader reader = command.ExecuteReader())
                     {
                         reader.Read();
-                        insulinId = reader.GetInt32(0);
+                        insulinId = reader.GetInt32(0);             
                         reader.Close();
                     }
                     connection.Close();
@@ -226,7 +226,7 @@ namespace ProjectVP_DiabetesLog
             List<int> ids = new List<int>();
             using (SQLiteConnection connection = new SQLiteConnection(LoadConnectionString()))
             {
-                string querry = "SELECT MeasurementId, Time, MeasuredValue, AddedInsulin.InsulinAmount, Insulin.Name, Insulin.Brand FROM Measurement LEFT JOIN AddedInsulin USING(AddedInsulinId) LEFT JOIN Insulin ON AddedInsulin.AddedInsulinId = Insulin.InsulinId WHERE Date = @date ORDER BY Time ASC";
+                string querry = "SELECT MeasurementId, Time, MeasuredValue, AddedInsulin.InsulinAmount, Insulin.Name, Insulin.Brand FROM Measurement LEFT JOIN AddedInsulin USING(AddedInsulinId) LEFT JOIN Insulin USING(InsulinId) WHERE Date = @date ORDER BY Time ASC";
                 using (SQLiteCommand command = new SQLiteCommand(querry,connection))
                 {
  
@@ -242,8 +242,8 @@ namespace ProjectVP_DiabetesLog
                             String time = reader.GetString(1);
                             double measuredValue = reader.IsDBNull(2) ? 0 : reader.GetDouble(2);
                             int insulinAmount = reader.IsDBNull(3) ? 0 : reader.GetInt32(3);
-                            String insulinName = reader.IsDBNull(4) ? "" : reader.GetString(4);
-                            String insulinBrand = reader.IsDBNull(5) ? "" : reader.GetString(5);
+                            String insulinName = reader.IsDBNull(4) ? "/" : reader.GetString(4);
+                            String insulinBrand = reader.IsDBNull(5) ? "/" : reader.GetString(5);
 
                             timeMeasurements.Add(new TimeMeasurement(DateTime.Parse(time), measuredValue, new InsulinAdded(new InsulinType(insulinName, insulinBrand), insulinAmount)));
                         }
@@ -263,8 +263,8 @@ namespace ProjectVP_DiabetesLog
                             using (SQLiteDataReader reader = command.ExecuteReader())
                             {
                                 while (reader.Read()) {
-                                    String name = reader.IsDBNull(0) ?  "" : reader.GetString(0);
-                                    String manufacturer = reader.IsDBNull(1) ? "" : reader.GetString(1);
+                                    String name = reader.IsDBNull(0) ?  "/" : reader.GetString(0);
+                                    String manufacturer = reader.IsDBNull(1) ? "/" : reader.GetString(1);
                                     double carbs = reader.IsDBNull(2) ? 0 : reader.GetDouble(2);
                                     double amountInGrams = reader.IsDBNull(3) ? 0 : reader.GetDouble(3);
                                     timeMeasurements[i].addMeal(new Meal(new Food(name, manufacturer, carbs), amountInGrams));
