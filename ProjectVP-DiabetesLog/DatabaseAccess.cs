@@ -180,7 +180,7 @@ namespace ProjectVP_DiabetesLog
                 using (SQLiteCommand command = new SQLiteCommand("SELECT InsulinId FROM Insulin WHERE Name = @Name AND Brand = @Brand", connection))
                 {
                     command.Parameters.Add("@Name", System.Data.DbType.String).Value = insulin.name;
-                    command.Parameters.Add("Brand", System.Data.DbType.String).Value = insulin.brand;
+                    command.Parameters.Add("@Brand", System.Data.DbType.String).Value = insulin.brand;
                     connection.Open();
                     using (SQLiteDataReader reader = command.ExecuteReader())
                     {
